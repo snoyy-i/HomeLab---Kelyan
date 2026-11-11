@@ -4,3 +4,5 @@ Tout a commencé en juin 2026 , ne me plaisant pas dans les études ou j'étais 
 
 - J'ai donc commencé par acheté un Raspberry PI 5 avec 8Go de RAM , c'était ma première vrai expérience et tout c'est super bien passé j'ai donc installer Proxmox VE sur ce Rasberry et je me suis familiariser avec. Et quelque temps âpres j'ai aussi acheter mon premier pc dédié a mon Infrastructure un DeskpPro de la marque DELL j'ai donc installer Proxmox VE aussi et j'ai retrouvé un ancien ordinateur portable qui trainer chez moi que j'ai donc reécuprer pour en faire un Proxmox Critique c'est la ou tourne ma connexion a distance via Netbird et mon DNS.
 J'ai aussi acheter un routeur Cudy pour isoler mon infrastructure au réseau de la maison , j'ai nommé mes ordinateur d'une façon reconnaissable c'est a dire par des nom de voiture 😊.
+
+
