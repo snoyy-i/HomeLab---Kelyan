@@ -1,2 +1,6 @@
-# homelab-
-HomeLab - Kelyan
+# Mon HomeLab
+- le commencement
+Tout a commencé en juin 2026 , ne me plaisant pas dans les études ou j'étais ( clim , froid et conventionnement d'air ) j'ai décidé de tout arrêter je venais de validé ma première année de BTS. Je me suis donc renseigné sur ce qui ma toujours passionné **l'informatique** , un amis a moi ma donc conseiller le BTS SIO option SISR , une semaine âpres j’étais inscrit dans l'école Ensitech à Cergy.Et a partir de la j'ai voulu commencer a prendre de l'avance et par conseil du même amis j'ai décidé de monter mon propre **homelab**.
+
+J'ai donc commencé par acheté un Raspberry PI 5 avec 8Go de RAM , c'était ma première vrai expérience et tout c'est super bien passé j'ai donc installer Proxmox VE sur ce Rasberry et je me suis familiariser avec. Et quelque temps âpres j'ai aussi acheter mon premier pc dédié a mon Infrastructure un DeskpPro de la marque DELL j'ai donc installer Proxmox VE aussi et j'ai retrouvé un ancien ordinateur portable qui trainer chez moi que j'ai donc reécuprer pour en faire un Proxmox Critique c'est la ou tourne ma connexion a distance via Netbird et mon DNS.
+J'ai aussi acheter un routeur Cudy pour isoler mon infrastructure au réseau de la maison , j'ai nommé mes ordinateur d'une façon reconnaissable c'est a dire par des nom de voiture 😊.
