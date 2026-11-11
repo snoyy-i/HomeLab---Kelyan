@@ -20,7 +20,7 @@ Ensuite j'ai acheté mon premier vrai PC pour le homelab, un HP ProDesk Mini, et
 - un routeur **Cudy** pour mettre le homelab sur un réseau séparé de celui de la maison
 - le **Raspberry Pi 5**, qui va bientôt servir de 3e vote pour le cluster
 
-Tout est rangé dans un petit rack 10 pouces que j'ai imprimé en 3D.
+Tout est rangé dans un petit rack 10 pouces que j'ai imprimé en 3D.(Je compte acheter bientot un rack assez sympatique : https://www.amazon.fr/dp/B0FBFDZD4C 😍)
 
 ## Mes services
 
