@@ -1,10 +1,10 @@
 # Mon homelab
 
-Salut, moi c'est keke, je suis en BTS SIO option SISR. Ici je partage le homelab que je monte chez moi pour apprendre.
+Salut, moi c'est kelyan, je suis en BTS SIO option SISR. Ici je partage le homelab que je monte chez moi pour apprendre.
 
 ## Comment ça a commencé
 
-En juin 2026, j'ai arrêté mes études dans la clim, le froid et le conditionnement d'air parce que ça ne me plaisait pas. Je venais de valider ma première année de BTS. Je me suis demandé ce qui m'avait toujours passionné, et c'était l'informatique. Un ami m'a conseillé le BTS SIO option SISR, et une semaine après j'étais inscrit chez Ensitech à Cergy.
+En juin 2026, j'ai décidé d'arrêté mes études dans la clim, le froid et le conditionnement d'air car ce métier ne me plaisais plus. Je venais de valider ma première année de BTS. Je me suis demandé ce qui m'avait toujours passionné, et c'était l'informatique. Un ami m'a conseillé le BTS SIO option SISR, et une semaine après j'étais inscrit chez Ensitech à Cergy.
 
 Pour prendre de l'avance, et toujours sur les conseils de ce même ami, j'ai décidé de monter mon propre homelab.
 
@@ -20,7 +20,7 @@ Ensuite j'ai acheté mon premier vrai PC pour le homelab, un HP ProDesk Mini, et
 - un routeur **Cudy** pour mettre le homelab sur un réseau séparé de celui de la maison
 - le **Raspberry Pi 5**, qui va bientôt servir de 3e vote pour le cluster
 
-Tout est rangé dans un petit rack 10 pouces que j'ai imprimé en 3D.(Je compte acheter bientot un rack assez sympatique : https://www.amazon.fr/dp/B0FBFDZD4C 😍)
+Tout est rangé dans un petit rack 10 pouces que j'ai imprimé en 3D.
 
 ## Mes services
 
