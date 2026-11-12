@@ -50,21 +50,36 @@ J'ai appris qu'une sauvegarde à un seul endroit, ça ne suffit pas. Donc chaque
 - Les mots de passe ne vont jamais dans les fichiers de config ni sur les captures d'écran, ils vont dans un gestionnaire de mots de passe
 - Je n'ouvre pas mon interface d'admin sur internet, j'y accède seulement par le VPN
 
+<p align="center">
+  <img src="https://img.shields.io/badge/Proxmox_VE-9-E57000?style=for-the-badge&logo=proxmox&logoColor=white" alt="Proxmox VE 9">
+  <img src="https://img.shields.io/badge/cluster-2_n%C5%93uds-7B61FF?style=for-the-badge" alt="Cluster de 2 nœuds">
+  <img src="https://img.shields.io/badge/conteneurs_LXC-9-2EA44F?style=for-the-badge&logo=linuxcontainers&logoColor=white" alt="9 conteneurs LXC">
+  <img src="https://img.shields.io/badge/VPN-WireGuard-88171A?style=for-the-badge&logo=wireguard&logoColor=white" alt="VPN WireGuard">
+  <img src="https://img.shields.io/badge/sauvegardes-3_copies-0A66C2?style=for-the-badge" alt="Sauvegardes en 3 copies">
+</p>
+
 ## Les schémas
 
 Voici les schémas de mon infra (sans les IP bien sûr).
 
 ![Vue d'ensemble](Cluster%20Garage.png)
-
 ![Rack et câblage](Rack%20et%20C%C3%A2blage.png)
-
 ![Services](Services.png)
-
 ![DNS et accès distant](DNS%20et%20Acc%C3%A8s%20Distant.png)
-
 ![Plex, sauvegardes et sécurité](Exploitation.png)
 
 Le PDF complet est ici : [homelab-garage.pdf](homelab-garage.pdf)
+
+<p align="center">
+  <img src="https://img.shields.io/badge/AdGuard_Home-68BC71?style=flat-square&logo=adguard&logoColor=white" alt="AdGuard Home">
+  <img src="https://img.shields.io/badge/NetBird-F68330?style=flat-square&logo=wireguard&logoColor=white" alt="NetBird">
+  <img src="https://img.shields.io/badge/Plex-EBAF00?style=flat-square&logo=plex&logoColor=black" alt="Plex">
+  <img src="https://img.shields.io/badge/Tautulli-E5A00D?style=flat-square&logo=plex&logoColor=black" alt="Tautulli">
+  <img src="https://img.shields.io/badge/Beszel-374151?style=flat-square" alt="Beszel">
+  <img src="https://img.shields.io/badge/Uptime_Kuma-5CDD8B?style=flat-square&logo=uptimekuma&logoColor=white" alt="Uptime Kuma">
+  <img src="https://img.shields.io/badge/Homepage-7B61FF?style=flat-square" alt="Homepage">
+  <img src="https://img.shields.io/badge/FiveM-F40552?style=flat-square&logo=fivem&logoColor=white" alt="FiveM">
+</p>
 
 ## La suite
 
