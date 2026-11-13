@@ -15,7 +15,7 @@ J'ai commencé avec un Raspberry Pi 5 (8 Go de RAM). J'ai installé Proxmox VE d
 Ensuite j'ai acheté mon premier vrai PC pour le homelab, un HP ProDesk Mini, et j'ai récupéré un vieux portable Lenovo qui traînait chez moi. Les deux sont sous Proxmox et forment un cluster que j'ai appelé "garage". Dernièrement j'ai aussi récupéré un Dell OptiPlex 3000 que je suis en train d'ajouter au cluster comme 3e nœud. J'ai donné des noms de voitures à mes machines 😊
 
 - **toyota-ae86** (HP ProDesk Mini, passé à 16 Go de RAM) : c'est là que tournent la plupart de mes services
-- **mazda-mx5** (le vieux portable Lenovo) : mon nœud "critique", il fait tourner le DNS et l'accès à distance
+- **mazda-mx5** (le vieux portable Lenovo) : mon nœud "critique", il fait tourner le DNS, l'accès à distance et mon agent IA
 - **nissan-skyline** (Dell OptiPlex 3000, 16 Go de RAM) : mon nouveau nœud, Proxmox est en cours d'installation
 - un **ReadyNAS** pour stocker mes films et mes sauvegardes
 - un routeur **Cudy** pour mettre le homelab sur un réseau séparé de celui de la maison
@@ -29,6 +29,7 @@ Chaque service tourne dans son propre conteneur LXC.
 
 - **AdGuard Home** (x2) : mon DNS, il bloque les pubs sur tout le réseau. J'en ai mis un sur chaque machine, comme ça si une tombe, internet marche toujours
 - **NetBird** : un VPN pour accéder à mon homelab quand je ne suis pas chez moi
+- **Hermes Agent** : un agent IA open source de Nous Research. Je lui parle depuis mon téléphone par messagerie, il garde une mémoire de nos échanges et utilise un modèle d'IA en ligne
 - **Plex** : mes films et mes séries, pour moi et mes proches
 - **Tautulli** : pour voir qui regarde quoi sur Plex, avec des alertes sur Discord
 - **Beszel** et **Uptime Kuma** : pour surveiller mes machines et savoir quand un service ne répond plus
@@ -54,7 +55,7 @@ J'ai appris qu'une sauvegarde à un seul endroit, ça ne suffit pas. Donc chaque
 <p align="center">
   <img src="https://img.shields.io/badge/Proxmox_VE-9-E57000?style=for-the-badge&logo=proxmox&logoColor=white" alt="Proxmox VE 9">
   <img src="https://img.shields.io/badge/cluster-3_n%C5%93uds-7B61FF?style=for-the-badge" alt="Cluster de 3 nœuds">
-  <img src="https://img.shields.io/badge/conteneurs_LXC-9-2EA44F?style=for-the-badge&logo=linuxcontainers&logoColor=white" alt="9 conteneurs LXC">
+  <img src="https://img.shields.io/badge/conteneurs_LXC-10-2EA44F?style=for-the-badge&logo=linuxcontainers&logoColor=white" alt="10 conteneurs LXC">
   <img src="https://img.shields.io/badge/VPN-WireGuard-88171A?style=for-the-badge&logo=wireguard&logoColor=white" alt="VPN WireGuard">
   <img src="https://img.shields.io/badge/sauvegardes-3_copies-0A66C2?style=for-the-badge" alt="Sauvegardes en 3 copies">
 </p>
@@ -74,6 +75,7 @@ Le PDF complet est ici : [homelab-garage.pdf](homelab-garage.pdf)
 <p align="center">
   <img src="https://img.shields.io/badge/AdGuard_Home-68BC71?style=flat-square&logo=adguard&logoColor=white" alt="AdGuard Home">
   <img src="https://img.shields.io/badge/NetBird-F68330?style=flat-square&logo=wireguard&logoColor=white" alt="NetBird">
+  <img src="https://img.shields.io/badge/Hermes_Agent-5B3FD1?style=flat-square" alt="Hermes Agent">
   <img src="https://img.shields.io/badge/Plex-EBAF00?style=flat-square&logo=plex&logoColor=black" alt="Plex">
   <img src="https://img.shields.io/badge/Tautulli-E5A00D?style=flat-square&logo=plex&logoColor=black" alt="Tautulli">
   <img src="https://img.shields.io/badge/Beszel-374151?style=flat-square" alt="Beszel">
