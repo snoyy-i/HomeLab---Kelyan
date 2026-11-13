@@ -15,7 +15,7 @@ J'ai commencé avec un Raspberry Pi 5 (8 Go de RAM). J'ai installé Proxmox VE d
 Ensuite j'ai acheté mon premier vrai PC pour le homelab, un HP ProDesk Mini, et j'ai récupéré un vieux portable Lenovo qui traînait chez moi. Les deux sont sous Proxmox et forment un cluster que j'ai appelé "garage". Dernièrement j'ai aussi récupéré un Dell OptiPlex 3000 que je suis en train d'ajouter au cluster comme 3e nœud. J'ai donné des noms de voitures à mes machines 😊
 
 - **toyota-ae86** (HP ProDesk Mini, passé à 16 Go de RAM) : c'est là que tournent la plupart de mes services
-- **mazda-mx5** (le vieux portable Lenovo) : mon nœud "critique", il fait tourner le DNS, l'accès à distance et mon agent IA
+- **mazda-mx5** (le vieux portable Lenovo) : mon nœud "critique", il fait tourner le DNS et l'accès à distance
 - **nissan-skyline** (Dell OptiPlex 3000, 16 Go de RAM) : mon nouveau nœud, Proxmox est en cours d'installation
 - un **ReadyNAS** pour stocker mes films et mes sauvegardes
 - un routeur **Cudy** pour mettre le homelab sur un réseau séparé de celui de la maison
@@ -34,7 +34,7 @@ Chaque service tourne dans son propre conteneur LXC.
 - **Tautulli** : pour voir qui regarde quoi sur Plex, avec des alertes sur Discord
 - **Beszel** et **Uptime Kuma** : pour surveiller mes machines et savoir quand un service ne répond plus
 - **Homepage** : une page d'accueil avec tous mes services
-- **FiveM** : un serveur GTA RP (éteint pour l'instant)
+- **FiveM** : un serveur GTA RP
 
 ## Mes sauvegardes
 
