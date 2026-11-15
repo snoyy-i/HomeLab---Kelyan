@@ -12,11 +12,11 @@ Pour prendre de l'avance, et toujours sur les conseils de ce même ami, j'ai dé
 
 J'ai commencé avec un Raspberry Pi 5 (8 Go de RAM). J'ai installé Proxmox VE dessus pour découvrir, c'était ma première vraie expérience et ça s'est super bien passé.
 
-Ensuite j'ai acheté mon premier vrai PC pour le homelab, un HP ProDesk Mini, et j'ai récupéré un vieux portable Lenovo qui traînait chez moi. Les deux sont sous Proxmox et forment un cluster que j'ai appelé "garage". Dernièrement j'ai aussi récupéré un Dell OptiPlex 3000 que j'ai ajouté au cluster comme 3e nœud. J'ai donné des noms de voitures à mes machines 😊
+Ensuite j'ai acheté mon premier vrai PC pour le homelab, un HP ProDesk Mini, et j'ai récupéré un vieux portable Lenovo qui traînait chez moi. Les deux sont sous Proxmox et forment un cluster que j'ai appelé "garage". Dernièrement j'ai aussi récupéré un Dell OptiPlex 3000 que j'ai ajouté au cluster comme 3e nœud. J'ai donné des noms d'hypercars à mes machines 😊
 
-- **toyota-ae86** (HP ProDesk Mini, passé à 16 Go de RAM) : c'est là que tournent la plupart de mes services
-- **mazda-mx5** (le vieux portable Lenovo) : mon nœud "critique", il fait tourner le DNS et l'accès à distance
-- **nissan-skyline** (Dell OptiPlex 3000 Micro, 16 Go de RAM) : mon 3e nœud, rangé dans le rack. Je compte y faire tourner une IA en local
+- **bugatti-chiron** (le vieux portable Lenovo) : mon nœud "critique", il fait tourner le DNS et l'accès à distance
+- **koenigsegg-jesko** (HP ProDesk Mini, passé à 16 Go de RAM) : c'est là que tournent la plupart de mes services
+- **pagani-huayra** (Dell OptiPlex 3000 Micro, i3, 12 Go de RAM) : mon 3e nœud, rangé dans le rack. C'est lui qui fait tourner mon IA en local
 - un **ReadyNAS** pour stocker mes films et mes sauvegardes
 - un routeur **Cudy** pour mettre le homelab sur un réseau séparé de celui de la maison
 
@@ -30,6 +30,7 @@ Chaque service tourne dans son propre conteneur LXC.
 - **NetBird** : un VPN pour accéder à mon homelab quand je ne suis pas chez moi
 - **Tailscale** : mon VPN de secours, si jamais NetBird ne répond plus
 - **Hermes Agent** : un agent IA open source de Nous Research. Je lui parle depuis mon téléphone par messagerie, il garde une mémoire de nos échanges et utilise un modèle d'IA en ligne
+- **Open WebUI + Ollama** : une IA qui tourne entièrement chez moi, sans carte graphique. C'est plus lent qu'une IA en ligne, mais rien ne sort de mon réseau
 - **Plex** : mes films et mes séries, pour moi et mes proches
 - **Tautulli** : pour voir qui regarde quoi sur Plex, avec des alertes sur Discord
 - **Beszel** et **Uptime Kuma** : pour surveiller mes machines et savoir quand un service ne répond plus
@@ -53,11 +54,13 @@ J'ai appris qu'une sauvegarde à un seul endroit, ça ne suffit pas. Donc chaque
 - Je n'ouvre pas mon interface d'admin sur internet, j'y accède seulement par le VPN
 - Il faut toujours un plan B pour l'accès à distance : c'est pour ça que j'ai mis Tailscale en secours de NetBird
 - Les mises à jour se font toutes seules la nuit avec un rapport sur Discord, mais jamais sur les 3 machines à la même heure
+- Avant de supprimer un compte sur le NAS, je vérifie qui s'en sert. J'ai supprimé un vieux compte et Plex a perdu tous ses films d'un coup
+- Quand Plex disait "non disponible à distance", le port était pourtant bien ouvert. Le problème venait d'ailleurs : Plex ouvrait un autre port tout seul (UPnP) et son certificat était incomplet. Les journaux de Plex et un `tcpdump` m'ont montré la vraie cause
 
 <p align="center">
   <img src="https://img.shields.io/badge/Proxmox_VE-9-E57000?style=for-the-badge&logo=proxmox&logoColor=white" alt="Proxmox VE 9">
   <img src="https://img.shields.io/badge/cluster-3_n%C5%93uds-7B61FF?style=for-the-badge" alt="Cluster de 3 nœuds">
-  <img src="https://img.shields.io/badge/conteneurs_LXC-11-2EA44F?style=for-the-badge&logo=linuxcontainers&logoColor=white" alt="11 conteneurs LXC">
+  <img src="https://img.shields.io/badge/conteneurs_LXC-12-2EA44F?style=for-the-badge&logo=linuxcontainers&logoColor=white" alt="12 conteneurs LXC">
   <img src="https://img.shields.io/badge/VPN-WireGuard-88171A?style=for-the-badge&logo=wireguard&logoColor=white" alt="VPN WireGuard">
   <img src="https://img.shields.io/badge/sauvegardes-3_copies-0A66C2?style=for-the-badge" alt="Sauvegardes en 3 copies">
 </p>
@@ -79,6 +82,8 @@ Le PDF complet est ici : [homelab-garage.pdf](homelab-garage.pdf)
   <img src="https://img.shields.io/badge/NetBird-F68330?style=flat-square&logo=wireguard&logoColor=white" alt="NetBird">
   <img src="https://img.shields.io/badge/Tailscale-242424?style=flat-square&logo=tailscale&logoColor=white" alt="Tailscale">
   <img src="https://img.shields.io/badge/Hermes_Agent-5B3FD1?style=flat-square" alt="Hermes Agent">
+  <img src="https://img.shields.io/badge/Open_WebUI-111111?style=flat-square" alt="Open WebUI">
+  <img src="https://img.shields.io/badge/Ollama-000000?style=flat-square&logo=ollama&logoColor=white" alt="Ollama">
   <img src="https://img.shields.io/badge/Plex-EBAF00?style=flat-square&logo=plex&logoColor=black" alt="Plex">
   <img src="https://img.shields.io/badge/Tautulli-E5A00D?style=flat-square&logo=plex&logoColor=black" alt="Tautulli">
   <img src="https://img.shields.io/badge/Beszel-374151?style=flat-square" alt="Beszel">
@@ -90,6 +95,7 @@ Le PDF complet est ici : [homelab-garage.pdf](homelab-garage.pdf)
 ## La suite
 
 - [ ] acheter un switch 8 ports pour faire des VLAN
-- [ ] passer nissan-skyline à 32 Go de RAM et y faire tourner une IA en local
+- [ ] passer pagani-huayra à 32 Go de RAM pour que l'IA locale aille plus vite
+- [ ] tout réinstaller dans la nouvelle baie avec des VLAN (mon plan d'adressage est prêt)
 - [ ] acheter un onduleur
 - [ ] tester une vraie restauration de sauvegarde
