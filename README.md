@@ -12,14 +12,13 @@ Pour prendre de l'avance, et toujours sur les conseils de ce même ami, j'ai dé
 
 J'ai commencé avec un Raspberry Pi 5 (8 Go de RAM). J'ai installé Proxmox VE dessus pour découvrir, c'était ma première vraie expérience et ça s'est super bien passé.
 
-Ensuite j'ai acheté mon premier vrai PC pour le homelab, un HP ProDesk Mini, et j'ai récupéré un vieux portable Lenovo qui traînait chez moi. Les deux sont sous Proxmox et forment un cluster que j'ai appelé "garage". Dernièrement j'ai aussi récupéré un Dell OptiPlex 3000 que je suis en train d'ajouter au cluster comme 3e nœud. J'ai donné des noms de voitures à mes machines 😊
+Ensuite j'ai acheté mon premier vrai PC pour le homelab, un HP ProDesk Mini, et j'ai récupéré un vieux portable Lenovo qui traînait chez moi. Les deux sont sous Proxmox et forment un cluster que j'ai appelé "garage". Dernièrement j'ai aussi récupéré un Dell OptiPlex 3000 que j'ai ajouté au cluster comme 3e nœud. J'ai donné des noms de voitures à mes machines 😊
 
 - **toyota-ae86** (HP ProDesk Mini, passé à 16 Go de RAM) : c'est là que tournent la plupart de mes services
 - **mazda-mx5** (le vieux portable Lenovo) : mon nœud "critique", il fait tourner le DNS et l'accès à distance
-- **nissan-skyline** (Dell OptiPlex 3000, 16 Go de RAM) : mon nouveau nœud, Proxmox est en cours d'installation
+- **nissan-skyline** (Dell OptiPlex 3000 Micro, 16 Go de RAM) : mon 3e nœud, rangé dans le rack. Je compte y faire tourner une IA en local
 - un **ReadyNAS** pour stocker mes films et mes sauvegardes
 - un routeur **Cudy** pour mettre le homelab sur un réseau séparé de celui de la maison
-- le **Raspberry Pi 5**, que je garde pour un second accès NetBird
 
 Tout est rangé dans un petit rack 10 pouces que j'ai imprimé en 3D.
 
@@ -29,6 +28,7 @@ Chaque service tourne dans son propre conteneur LXC.
 
 - **AdGuard Home** (x2) : mon DNS, il bloque les pubs sur tout le réseau. J'en ai mis un sur chaque machine, comme ça si une tombe, internet marche toujours
 - **NetBird** : un VPN pour accéder à mon homelab quand je ne suis pas chez moi
+- **Tailscale** : mon VPN de secours, si jamais NetBird ne répond plus
 - **Hermes Agent** : un agent IA open source de Nous Research. Je lui parle depuis mon téléphone par messagerie, il garde une mémoire de nos échanges et utilise un modèle d'IA en ligne
 - **Plex** : mes films et mes séries, pour moi et mes proches
 - **Tautulli** : pour voir qui regarde quoi sur Plex, avec des alertes sur Discord
@@ -47,15 +47,17 @@ J'ai appris qu'une sauvegarde à un seul endroit, ça ne suffit pas. Donc chaque
 ## Ce que j'ai appris (et mes galères)
 
 - En YAML, un espace en trop et plus rien ne marche. Homepage me l'a bien fait comprendre
-- Avec un cluster de 2 machines, si une s'éteint, l'autre se bloque (le quorum). C'est pour ça que j'ajoute un 3e nœud : avec 3 machines, le cluster tient même si une tombe
+- Avec un cluster de 2 machines, si une s'éteint, l'autre se bloque (le quorum). C'est pour ça que j'ai ajouté un 3e nœud : avec 3 machines, le cluster tient même si une tombe
 - Une erreur bizarre ça peut juste être une ligne oubliée dans un fichier de config
 - Les mots de passe ne vont jamais dans les fichiers de config ni sur les captures d'écran, ils vont dans un gestionnaire de mots de passe
 - Je n'ouvre pas mon interface d'admin sur internet, j'y accède seulement par le VPN
+- Il faut toujours un plan B pour l'accès à distance : c'est pour ça que j'ai mis Tailscale en secours de NetBird
+- Les mises à jour se font toutes seules la nuit avec un rapport sur Discord, mais jamais sur les 3 machines à la même heure
 
 <p align="center">
   <img src="https://img.shields.io/badge/Proxmox_VE-9-E57000?style=for-the-badge&logo=proxmox&logoColor=white" alt="Proxmox VE 9">
   <img src="https://img.shields.io/badge/cluster-3_n%C5%93uds-7B61FF?style=for-the-badge" alt="Cluster de 3 nœuds">
-  <img src="https://img.shields.io/badge/conteneurs_LXC-10-2EA44F?style=for-the-badge&logo=linuxcontainers&logoColor=white" alt="10 conteneurs LXC">
+  <img src="https://img.shields.io/badge/conteneurs_LXC-11-2EA44F?style=for-the-badge&logo=linuxcontainers&logoColor=white" alt="11 conteneurs LXC">
   <img src="https://img.shields.io/badge/VPN-WireGuard-88171A?style=for-the-badge&logo=wireguard&logoColor=white" alt="VPN WireGuard">
   <img src="https://img.shields.io/badge/sauvegardes-3_copies-0A66C2?style=for-the-badge" alt="Sauvegardes en 3 copies">
 </p>
@@ -75,6 +77,7 @@ Le PDF complet est ici : [homelab-garage.pdf](homelab-garage.pdf)
 <p align="center">
   <img src="https://img.shields.io/badge/AdGuard_Home-68BC71?style=flat-square&logo=adguard&logoColor=white" alt="AdGuard Home">
   <img src="https://img.shields.io/badge/NetBird-F68330?style=flat-square&logo=wireguard&logoColor=white" alt="NetBird">
+  <img src="https://img.shields.io/badge/Tailscale-242424?style=flat-square&logo=tailscale&logoColor=white" alt="Tailscale">
   <img src="https://img.shields.io/badge/Hermes_Agent-5B3FD1?style=flat-square" alt="Hermes Agent">
   <img src="https://img.shields.io/badge/Plex-EBAF00?style=flat-square&logo=plex&logoColor=black" alt="Plex">
   <img src="https://img.shields.io/badge/Tautulli-E5A00D?style=flat-square&logo=plex&logoColor=black" alt="Tautulli">
@@ -87,6 +90,6 @@ Le PDF complet est ici : [homelab-garage.pdf](homelab-garage.pdf)
 ## La suite
 
 - [ ] acheter un switch 8 ports pour faire des VLAN
-- [ ] installer Proxmox sur nissan-skyline et l'ajouter au cluster
+- [ ] passer nissan-skyline à 32 Go de RAM et y faire tourner une IA en local
 - [ ] acheter un onduleur
 - [ ] tester une vraie restauration de sauvegarde
